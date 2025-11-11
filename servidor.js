@@ -7,6 +7,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors());
+app.use(express.static("public"));
 
 app.get("/", (req, res)=> {
     res.send("server rodando")
@@ -29,5 +30,5 @@ app.get("/api/clima/:cidade", async (req, res) => {
     };
 });
 
-const PORTA = 3550;
+const PORTA = 3000;
 app.listen(PORTA, ()=> console.log(`server rodando na porta http://localhost:${PORTA}`));
