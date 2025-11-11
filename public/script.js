@@ -6,7 +6,7 @@ document.getElementById("buscar").addEventListener("click", async ()=> {
     
     if(!cidade){
         resultado.innerHTML = `<p class="text-red-500">Digite uma cidade!</p>`;
-        return; //não entendi esse return 
+        return;
     };
      
     try{
@@ -17,7 +17,7 @@ document.getElementById("buscar").addEventListener("click", async ()=> {
         console.log(main.temp)
         resultado.innerHTML = `
           <div class="bg-blue-400  rounded-lg p-4 mt-3">
-            <h2 class="text-lg  font-bold">${name}, ${sys.country}</h2>
+            <h2 class="text-lg  font-bold ">${name}, ${sys.country}</h2>
             <p class="text-4xl font-bold text-blue-600">${main.temp}ºC</p>
           </div>
         `     
